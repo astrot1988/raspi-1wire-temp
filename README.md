@@ -3,6 +3,8 @@
 Provides a high-level interface to a "[1-wire](https://pinout.xyz/pinout/1_wire)" compatible device 
 or file on a Raspberry Pi.
 
+This code was really only tested with a DS18B20 on a Raspberry Pi 3.
+
 ## Installation
 
 `npm install @rbprogrammer/raspi-1wire`
