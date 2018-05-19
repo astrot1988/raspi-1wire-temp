@@ -7,13 +7,13 @@ This code was really only tested with a DS18B20 on a Raspberry Pi 3.
 
 ## Installation
 
-`npm install @rbprogrammer/raspi-1wire`
+`npm install raspi-1wire`
 
 ## Usage
 
 TODO
 ```
-const raspi1wire = require('@rbprogrammer/raspi-1wire');
+const raspi1wire = require('raspi-1wire');
 ```
 
 ## Tests
