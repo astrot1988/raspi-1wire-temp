@@ -24,3 +24,9 @@ const raspi1wire = require('raspi-1wire');
 
 In lieu of a formal style guide, take care to maintain the existing coding style.  Add unit tests 
 for any new or changed functionality.  Lint and test your code.
+
+# Status
+
+[![Build Status](https://travis-ci.org/rbprogrammer/raspi-1wire-temp.svg?branch=master)](https://travis-ci.org/rbprogrammer/raspi-1wire-temp)
+
+[![Coverage Status](https://coveralls.io/repos/github/rbprogrammer/raspi-1wire-temp/badge.svg?branch=master)](https://coveralls.io/github/rbprogrammer/raspi-1wire-temp?branch=master)
