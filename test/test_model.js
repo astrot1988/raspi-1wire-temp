@@ -21,25 +21,25 @@ describe('modelTemperature', function () {
 
     it('30 is hot', function () {
         const temp = new Temperature(toRaw(30));
-        expect(temp.celsius()).to.be.closeTo(30.0, TEMP_DELTA);
-        expect(temp.fahrenheit()).to.be.closeTo(86.0, TEMP_DELTA);
+        expect(temp.celsius).to.be.closeTo(30.0, TEMP_DELTA);
+        expect(temp.fahrenheit).to.be.closeTo(86.0, TEMP_DELTA);
     });
 
     it('20 is nice', function () {
         const temp = new Temperature(toRaw(20));
-        expect(temp.celsius()).to.be.closeTo(20.0, TEMP_DELTA);
-        expect(temp.fahrenheit()).to.be.closeTo(68.0, TEMP_DELTA);
+        expect(temp.celsius).to.be.closeTo(20.0, TEMP_DELTA);
+        expect(temp.fahrenheit).to.be.closeTo(68.0, TEMP_DELTA);
     });
 
     it('10 wear a jacket', function () {
         const temp = new Temperature(toRaw(10));
-        expect(temp.celsius()).to.be.closeTo(10.0, TEMP_DELTA);
-        expect(temp.fahrenheit()).to.be.closeTo(50.0, TEMP_DELTA);
+        expect(temp.celsius).to.be.closeTo(10.0, TEMP_DELTA);
+        expect(temp.fahrenheit).to.be.closeTo(50.0, TEMP_DELTA);
     });
 
     it('0 is ice', function () {
         const temp = new Temperature(toRaw(0));
-        expect(temp.celsius()).to.be.closeTo(0.0, TEMP_DELTA);
-        expect(temp.fahrenheit()).to.be.closeTo(32.0, TEMP_DELTA);
+        expect(temp.celsius).to.be.closeTo(0.0, TEMP_DELTA);
+        expect(temp.fahrenheit).to.be.closeTo(32.0, TEMP_DELTA);
     });
 });
