@@ -1,7 +1,7 @@
 'use strict';
 
 const expect = require('chai').expect;
-const Temperature = require('../lib/model');
+const Temperature = require('../../lib/model/temperature');
 
 /**
  * A simple function to convert a readable celsius number of the expected raw value that would have
@@ -17,7 +17,7 @@ function toRaw(celsius) {
 /** The minimum delta allowed when comparing floating-point numbers. */
 const TEMP_DELTA = 0.1;
 
-describe('modelTemperature', function () {
+describe('model.temperature', function () {
 
     it('30 is hot', function () {
         const temp = new Temperature(toRaw(30));
