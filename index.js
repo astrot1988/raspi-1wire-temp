@@ -1,6 +1,6 @@
 'use strict';
 
-const Temperature = require('./lib/model');
+const Temperature = require('./lib/model/temperature');
 
 /**
  * Exports the high-level RasPi 1-Wire Temperature API.
