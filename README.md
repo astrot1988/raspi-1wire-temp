@@ -29,3 +29,7 @@ const raspi1wire = require('raspi-1wire');
 
 In lieu of a formal style guide, take care to maintain the existing coding style.  Add unit tests 
 for any new or changed functionality.  Lint and test your code.
+
+# TODO
+
+- [ ] Update `lib/factory` (and create relevant controllers) to support multiple devices.
