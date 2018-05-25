@@ -1,10 +1,10 @@
 'use strict';
 
-const StreamController = require('../../lib/controller/emulator');
+const StreamController = require('../../lib/controller/stream');
 const expect = require('chai').expect;
 
 describe('controller', function () {
-    describe('emulator', function () {
+    describe('stream', function () {
 
         describe('constructor()', function () {
             it("class can be instantiated", function () {
