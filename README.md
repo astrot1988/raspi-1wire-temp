@@ -1,10 +1,12 @@
 # Raspberry Pi 1-Wire High-Level Interface
 
-[![Build Status](https://travis-ci.org/rbprogrammer/raspi-1wire-temp.svg?branch=master)](https://travis-ci.org/rbprogrammer/raspi-1wire-temp)
-[![Coverage Status](https://coveralls.io/repos/github/rbprogrammer/raspi-1wire-temp/badge.svg?branch=master)](https://coveralls.io/github/rbprogrammer/raspi-1wire-temp?branch=master)
+[![Build Status][travis-image]][travis-url]
+[![Test Coverage][coveralls-image]][coveralls-url]
+[![Dependencies][dependencies-image]][dependencies-url]
+[![DevDependencies][dependencies-dev-image]][dependencies-dev-url]
 
 [![GitHub version](https://badge.fury.io/gh/rbprogrammer%2Fraspi-1wire-temp.svg)](https://badge.fury.io/gh/rbprogrammer%2Fraspi-1wire-temp)
-[![npm version](https://badge.fury.io/js/raspi-1wire-temp.svg)](https://badge.fury.io/js/raspi-1wire-temp)
+[![NPM version][npm-image]][npm-url]
 
 Provides a high-level interface to a "[1-wire](https://pinout.xyz/pinout/1_wire)" compatible device 
 or file on a Raspberry Pi.
