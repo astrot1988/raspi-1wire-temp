@@ -68,7 +68,7 @@ describe('controller', function () {
         describe('_parseData()', function () {
             it('base class throws exception', function () {
                 const controller = new TestController();
-                expect(controller._readData).to.throw(Error, 'Subclass did not implement method.');
+                expect(controller._parseData).to.throw(Error, 'Subclass did not implement method.');
             });
         });
     });
