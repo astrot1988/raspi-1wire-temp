@@ -1,9 +1,3 @@
-# WORK IN PROGRESS
-
-This project is currently a work in progress.  I've been making progress to completing the API, and
-should be completed sometime in the next few days as I iron out the API, testing, and implementing
-into an [actual use-case](https://github.com/rbprogrammer/baby-monitor).
-
 # Raspberry Pi 1-Wire High-Level Interface
 
 [![Build Status](https://travis-ci.org/rbprogrammer/raspi-1wire-temp.svg?branch=master)](https://travis-ci.org/rbprogrammer/raspi-1wire-temp)
@@ -23,18 +17,93 @@ requests that fix bugs on a variety of hardware options.
 
 ## Installation
 
-`npm install raspi-1wire`
+`npm install raspi-1wire-temp`
 
 ## Usage
 
-TODO
+### Finding Devices
+
+The idea with this approach is for R1WT to automatically determine what type of temperature 
+controller to create.  Currently this project only supports the output from a DS18B20 device.
+However if/when more temperature sensors are tested they could be integrated into R1WT relatively
+easy.
+
 ```
-const raspi1wire = require('raspi-1wire');
+const r1wt = require('raspi-1wire-temp');
+const devices = r1wt.findDevices();
+```
+
+By default, R1WT looks for devices that can be globbed with `/sys/bus/w1/devices/28-*/w1_slave`
+However, `findDevices()` method has an optional _hint_ glob string that can help R1WT find the 
+device files.
+
+```
+const r1wt = require('raspi-1wire-temp');
+const devices = r1wt.findDevices('/dev/my/temp/sensor*.dev');
+```
+
+The `findDevices()` method will return a non-null array of filenames to devices.
+
+### Creating A Device Controller
+
+Once you obtain the filename of a device, either through `findDevices()` or from a known location,
+the `fromDevice()` method is used to create the temperature controller.
+
+```
+const r1wt = require('raspi-1wire-temp');
+const devices = r1wt.findDevices();
+assert(devices.length > 0);
+
+const controller = r1wt.fromDevice(devices[0]);
+console.log(controller.current.celsius)
+console.log(controller.current.fahrenheit)
+```
+
+For every call to `controller.current` the controller will re-read the device for the current 
+temperature.  If reading from the device is an expensive call it might be wise to cache the current
+temperature object for some time.
+
+### Create an Emulated Controller
+
+For some contexts, like testing, you might need a stubbed or emulated device controller.  The 
+`fromStream()` method can be used to provide this functionality.  This may be particularly useful 
+when developing software on non-RPI hardware.  Effectively allowing a temperature sensor to be 
+emulated with a known stream of data.
+
+```
+const r1wt = require('raspi-1wire-temp');
+const controller = r1wt.fromStream(false, 1000, 2000, 3000)
+
+assert(controller.current.celsius == 1000);
+assert(controller.current.celsius == 2000);
+assert(controller.current.celsius == 3000);
+```
+
+The first argument to `fromStream()` is a flag indicating if the stream should repeat.  When set to
+`false` the stream will raise an error when the data has been exhausted.  To repeat the stream, set
+the flag to `true`.
+
+```
+const r1wt = require('raspi-1wire-temp');
+const controller = r1wt.fromStream(true, 1000, 2000, 3000)
+
+assert(controller.current.celsius == 1000);
+assert(controller.current.celsius == 2000);
+assert(controller.current.celsius == 3000);
+
+assert(controller.current.celsius == 1000);
+assert(controller.current.celsius == 2000);
+assert(controller.current.celsius == 3000);
+
+// etcetera . . .
 ```
 
 ## Tests
 
-`npm test`
+```
+npm run test
+npm run cover
+```
 
 ## Contributing
 
