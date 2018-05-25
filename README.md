@@ -1,3 +1,9 @@
+# WORK IN PROGRESS
+
+This project is currently a work in progress.  I've been making progress to completing the API, and
+should be completed sometime in the next few days as I iron out the API, testing, and implementing
+into an [actual use-case](https://github.com/rbprogrammer/baby-monitor).
+
 # Raspberry Pi 1-Wire High-Level Interface
 
 [![Build Status](https://travis-ci.org/rbprogrammer/raspi-1wire-temp.svg?branch=master)](https://travis-ci.org/rbprogrammer/raspi-1wire-temp)
