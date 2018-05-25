@@ -1,6 +1,6 @@
 {
   "name": "raspi-1wire-temp",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides a high-level interface to a \"1-wire\" compatible temperature device or file on a Raspberry Pi.",
   "license": "GPL-3.0-only",
   "private": false,
