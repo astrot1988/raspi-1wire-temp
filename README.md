@@ -38,9 +38,3 @@ for any new or changed functionality.  Lint and test your code.
 # TODO
 
 - [ ] Update `lib/factory` (and create relevant controllers) to support multiple devices.
-
-
-
-https://github.com/rbprogrammer/raspi-1wire-temp
-https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738
-https://www.npmjs.com/package/raspi-1wire-temp
