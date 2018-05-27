@@ -7,13 +7,13 @@
 
 [![GitHub version](https://badge.fury.io/gh/rbprogrammer%2Fraspi-1wire-temp.svg)](https://badge.fury.io/gh/rbprogrammer%2Fraspi-1wire-temp)
 [![npm version](https://badge.fury.io/js/raspi-1wire-temp.svg)](https://badge.fury.io/js/raspi-1wire-temp)
+[![npm](https://img.shields.io/npm/dw/raspi-1wire-temp.svg)](https://www.npmjs.com/package/raspi-1wire-temp)
 
 Provides a high-level interface to a "[1-wire](https://pinout.xyz/pinout/1_wire)" compatible device 
 or file on a Raspberry Pi.
 
 This code was really only tested with a DS18B20 on a Raspberry Pi 3.  I would very much appreciate
-testers with different hardware to test and use this module.  I am more than willing to merge pull
-requests that fix bugs on a variety of hardware options.
+testers with different hardware to test and use this module.
 
 ## Installation
 
