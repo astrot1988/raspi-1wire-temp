@@ -1,6 +1,5 @@
 # Raspberry Pi 1-Wire High-Level Interface
 
-[![Build Status](https://travis-ci.org/rbprogrammer/raspi-1wire-temp.svg?branch=master)](https://travis-ci.org/rbprogrammer/raspi-1wire-temp)
 [![dependencies Status](https://david-dm.org/rbprogrammer/raspi-1wire-temp/status.svg)](https://david-dm.org/rbprogrammer/raspi-1wire-temp)
 [![devDependencies Status](https://david-dm.org/rbprogrammer/raspi-1wire-temp/dev-status.svg)](https://david-dm.org/rbprogrammer/raspi-1wire-temp?type=dev)
 
