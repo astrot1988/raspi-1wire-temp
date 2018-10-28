@@ -1,12 +1,12 @@
 {
   "name": "raspi-1wire-temp",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Provides a high-level interface to a \"1-wire\" compatible temperature device or file on a Raspberry Pi.",
   "license": "GPL-3.0-only",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git@github.com:rbprogrammer/raspi-1wire-temp.git"
+    "url": "git@gitlab.com:rbprogrammer/raspi-1wire-temp.git"
   },
   "engines": {
     "node": ">=9.11.1"
@@ -20,6 +20,7 @@
     "DS18B20",
     "one-wire",
     "raspberrypi",
+    "raspberry-pi",
     "raspi",
     "rpi",
     "temperature"

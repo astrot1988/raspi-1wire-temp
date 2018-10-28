@@ -1,11 +1,9 @@
 # Raspberry Pi 1-Wire High-Level Interface
 
 [![Build Status](https://travis-ci.org/rbprogrammer/raspi-1wire-temp.svg?branch=master)](https://travis-ci.org/rbprogrammer/raspi-1wire-temp)
-[![Coverage Status](https://coveralls.io/repos/github/rbprogrammer/raspi-1wire-temp/badge.svg?branch=master)](https://coveralls.io/github/rbprogrammer/raspi-1wire-temp?branch=master)
 [![dependencies Status](https://david-dm.org/rbprogrammer/raspi-1wire-temp/status.svg)](https://david-dm.org/rbprogrammer/raspi-1wire-temp)
 [![devDependencies Status](https://david-dm.org/rbprogrammer/raspi-1wire-temp/dev-status.svg)](https://david-dm.org/rbprogrammer/raspi-1wire-temp?type=dev)
 
-[![GitHub version](https://badge.fury.io/gh/rbprogrammer%2Fraspi-1wire-temp.svg)](https://badge.fury.io/gh/rbprogrammer%2Fraspi-1wire-temp)
 [![npm version](https://badge.fury.io/js/raspi-1wire-temp.svg)](https://badge.fury.io/js/raspi-1wire-temp)
 [![npm](https://img.shields.io/npm/dw/raspi-1wire-temp.svg)](https://www.npmjs.com/package/raspi-1wire-temp)
 
@@ -113,3 +111,5 @@ for any new or changed functionality.  Lint and test your code.
 # TODO
 
 - [ ] Update `lib/factory` (and create relevant controllers) to support multiple devices.
+- [ ] Add GitLab CI for running tests.
+- [ ] Add coverage badge from GitLab.
