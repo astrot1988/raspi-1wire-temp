@@ -34,6 +34,7 @@ describe('factory', function () {
                 const device = tmp.fileSync(deviceOptions);
                 testDevices.push(device);
                 testDevicesNames.push(device.name);
+                console.log(device.name);
 
                 const msg = "Temp test file does not exist: " + device.name;
                 expect(fs.existsSync(device.name), msg).to.be.true;
@@ -44,11 +45,6 @@ describe('factory', function () {
                 const tempDir = path.dirname(testDevicesNames[0]);
                 let pattern = tempDir + '/' + deviceOptions.prefix + '*'
                     + deviceOptions.postfix;
-                // Urg, this is fucking disguising.
-                if (os.platform().includes('win32')) {
-                    console.log(os.platform());
-                    pattern = path.win32.normalize(pattern);
-                }
 
                 // Run the test.
                 const devices = factory.findDevices(pattern);
