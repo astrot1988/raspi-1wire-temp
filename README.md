@@ -106,10 +106,3 @@ npm run cover
 
 In lieu of a formal style guide, take care to maintain the existing coding style.  Add unit tests 
 for any new or changed functionality.  Lint and test your code.
-
-# TODO
-
-- [ ] Update `lib/factory` (and create relevant controllers) to support multiple devices.
-- [ ] Add GitLab CI for running tests.
-- [ ] Add coverage badge from GitLab.
-- [ ] Add build status badges for Gitlab projects.
