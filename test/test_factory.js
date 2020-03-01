@@ -4,10 +4,11 @@ const DS18B20DeviceController = require('../lib/controller/device_DS18B20');
 const expect = require('chai').expect;
 const factory = require('../lib/factory');
 const fs = require('fs');
+const os = require('os');
+const path = require('path');
 const sinon = require('sinon');
 const StreamController = require('../lib/controller/stream');
 const tmp = require('tmp');
-const path = require('path');
 
 describe('factory', function () {
     describe('API', function () {
@@ -39,10 +40,16 @@ describe('factory', function () {
             }
 
             try {
-                // Run the test.
+                // Build up a platform dependent pattern string.
                 const tempDir = path.dirname(testDevicesNames[0]);
-                const pattern = tempDir + '/' + deviceOptions.prefix + '*'
+                let pattern = tempDir + '/' + deviceOptions.prefix + '*'
                     + deviceOptions.postfix;
+                // Urg, this is fucking disguising.
+                if (os.platform().includes('win32')) {
+                    pattern = path.win32.normalize(pattern);
+                }
+
+                // Run the test.
                 const devices = factory.findDevices(pattern);
 
                 // Ensure the return devices have the right expectations.
