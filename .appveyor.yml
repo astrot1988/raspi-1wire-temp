@@ -44,7 +44,7 @@ install:
       Install-Product node $env:nodejs_version;
       & node --version;
       & npm --version;
-      & npm install;
+      & npm install 2>&1;
 
   - sh: >-
       env | sort;
