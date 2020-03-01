@@ -7,5 +7,6 @@ lcov-report/
 # Files.
 coverage.json
 lcov.info
+npm-debug.log
 
 # Wildcards.
