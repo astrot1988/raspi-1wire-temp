@@ -45,6 +45,7 @@ install:
       & node --version;
       & npm --version;
       & npm install 2>&1;
+      $Env:LastExitCode;
 
   - sh: >-
       env | sort;
