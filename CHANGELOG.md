@@ -1,3 +1,8 @@
+# Version 2
+
+- 2.0.0
+    - Version bump from 1.0.8.
+
 # Version 1
 
 - 1.0.8
