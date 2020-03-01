@@ -27,4 +27,4 @@ code_coverage:
     - *before_script
   script:
     - npm install
-    - npm run cover
+    - npm run coverage
