@@ -1,7 +1,7 @@
 # Directories.
-.idea
-node_modules
-lcov-report
+.idea/
+node_modules/
+lcov-report/
 
 # Files.
 coverage.json
