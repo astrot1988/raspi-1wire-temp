@@ -30,6 +30,7 @@ number accordingly.  Lastly we can use
 new version number.
 
 ```bash
+pip3 install --user bumpversion
 bumpversion patch
 # or "bumpversion minor", if it's appropriate!
 # or "bumpversion major", if it's appropriate!!
