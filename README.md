@@ -1,5 +1,10 @@
 # Raspberry Pi 1-Wire High-Level Interface
 
+[![pipeline](https://gitlab.com/rbprogrammer/raspi-1wire-temp/badges/master/pipeline.svg)](https://gitlab.com/rbprogrammer/raspi-1wire-temp/pipelines)
+[![codecov](https://codecov.io/gl/deliberist/rbprogrammer/branch/master/graph/badge.svg)](https://codecov.io/gl/rbprogrammer/raspi-1wire-temp)
+[![dependencies Status](https://david-dm.org/rbprogrammer/raspi-1wire-temp/status.svg)](https://david-dm.org/rbprogrammer/semver-updater)
+[![devDependencies Status](https://david-dm.org/rbprogrammer/raspi-1wire-temp/dev-status.svg)](https://david-dm.org/rbprogrammer/raspi-1wire-temp?type=dev)
+
 [![npm version](https://badge.fury.io/js/raspi-1wire-temp.svg)](https://badge.fury.io/js/raspi-1wire-temp)
 [![npm](https://img.shields.io/npm/dw/raspi-1wire-temp.svg)](https://www.npmjs.com/package/raspi-1wire-temp)
 
