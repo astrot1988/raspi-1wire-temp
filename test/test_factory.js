@@ -4,7 +4,6 @@ const DS18B20DeviceController = require('../lib/controller/device_DS18B20');
 const expect = require('chai').expect;
 const factory = require('../lib/factory');
 const fs = require('fs');
-const os = require('os');
 const path = require('path');
 const sinon = require('sinon');
 const StreamController = require('../lib/controller/stream');
@@ -33,8 +32,8 @@ describe('factory', function () {
             for (let i = 0; i < numTestDevices; i++) {
                 const device = tmp.fileSync(deviceOptions);
                 testDevices.push(device);
-                testDevicesNames.push(device.name);
-                console.log(device.name);
+                testDevicesNames.push(path.normalize(device.name));
+console.log(path.normalize(device.name));
 
                 const msg = "Temp test file does not exist: " + device.name;
                 expect(fs.existsSync(device.name), msg).to.be.true;
