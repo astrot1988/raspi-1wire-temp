@@ -7,6 +7,7 @@ const fs = require('fs');
 const sinon = require('sinon');
 const StreamController = require('../lib/controller/stream');
 const tmp = require('tmp');
+const path = require('path');
 
 describe('factory', function () {
     describe('API', function () {
@@ -40,7 +41,8 @@ describe('factory', function () {
 
             try {
                 // Run the test.
-                const pattern = '/tmp/' + deviceOptions.prefix + '*'
+                const tempDir = path.dirname(testDevicesNames[0]);
+                const pattern = tempDir + '/' + deviceOptions.prefix + '*'
                     + deviceOptions.postfix;
                 const devices = factory.findDevices(pattern);
 
