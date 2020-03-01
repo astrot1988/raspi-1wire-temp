@@ -32,6 +32,9 @@ describe('factory', function () {
                 const device = tmp.fileSync(deviceOptions);
                 testDevices.push(device);
                 testDevicesNames.push(device.name);
+
+                const msg = "Temp test file does not exist: " + device.name;
+                expect(fs.existsSync(device.name), msg).to.be.true;
             }
 
             try {
