@@ -37,10 +37,6 @@ environment:
 
 build: off
 
-parsers:
-  javascript:
-    enable_partials: yes
-
 install:
 
   - ps: >-
