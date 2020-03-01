@@ -46,6 +46,7 @@ describe('factory', function () {
                     + deviceOptions.postfix;
                 // Urg, this is fucking disguising.
                 if (os.platform().includes('win32')) {
+                    console.log(os.platform());
                     pattern = path.win32.normalize(pattern);
                 }
 
