@@ -35,7 +35,7 @@ const INVALID_RAW_DATA = VALID_RAW_DATA.replace('\n', '');
 const TEMP_DELTA = 0.1;
 
 describe('controller', function () {
-    describe('device', function () {
+    describe('device-DS18B20', function () {
 
         beforeEach('initializing temporary temperature file', function () {
             this.tempDevice = tmp.fileSync({
