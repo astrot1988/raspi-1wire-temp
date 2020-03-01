@@ -31,7 +31,6 @@ describe('factory', function () {
             const testDevicesNames = [];
             for (let i = 0; i < numTestDevices; i++) {
                 const device = tmp.fileSync(deviceOptions);
-                console.log("Created file: " + device.name);
                 testDevices.push(device);
                 testDevicesNames.push(device.name);
 
