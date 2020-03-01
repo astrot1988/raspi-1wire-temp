@@ -45,8 +45,8 @@ describe('controller', function () {
                 expect(emulator._readData()).to.equal(3.3);
 
                 expect(emulator._index).to.equal(3);
-                expect(() => emulator._readData())
-                    .to.throw(Error, 'Non-repeatable stream exhausted all data.');
+                expect(() => emulator._readData()).to.throw(
+                    Error, 'Non-repeatable stream exhausted all data.');
             });
         });
 

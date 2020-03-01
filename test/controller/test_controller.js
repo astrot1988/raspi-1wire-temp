@@ -19,8 +19,9 @@ describe('controller', function () {
                 const func = function () {
                     new ControllerIf();
                 };
-                expect(func).to.throw(TypeError,
-                                      'Cannot construct ControllerIf instances directly.');
+                expect(func).to.throw(
+                    TypeError,
+                    'Cannot construct ControllerIf instances directly.');
             });
 
             it("subclass can be instantiated", function () {
@@ -61,14 +62,16 @@ describe('controller', function () {
         describe('_readData()', function () {
             it('base class throws exception', function () {
                 const controller = new TestController();
-                expect(controller._readData).to.throw(Error, 'Subclass did not implement method.');
+                expect(controller._readData).to.throw(
+                    Error, 'Subclass did not implement method.');
             });
         });
 
         describe('_parseData()', function () {
             it('base class throws exception', function () {
                 const controller = new TestController();
-                expect(controller._parseData).to.throw(Error, 'Subclass did not implement method.');
+                expect(controller._parseData).to.throw(
+                    Error, 'Subclass did not implement method.');
             });
         });
     });

@@ -36,7 +36,8 @@ describe('factory', function () {
 
             try {
                 // Run the test.
-                const pattern = '/tmp/' + deviceOptions.prefix + '*' + deviceOptions.postfix;
+                const pattern = '/tmp/' + deviceOptions.prefix + '*'
+                    + deviceOptions.postfix;
                 const devices = factory.findDevices(pattern);
 
                 // Ensure the return devices have the right expectations.
@@ -53,9 +54,9 @@ describe('factory', function () {
             const devices = factory.findDevices();
             expect(devices).to.be.an.instanceof(Array);
 
-            // Since these tests are probably not run on a Raspberry Pi, chances are the actual
-            // device may not be there.  The default "hint" will be used, and thus no devices will
-            // be found.
+            // Since these tests are probably not run on a Raspberry Pi, chances
+            // are the actual device may not be there.  The default "hint" will
+            // be used, and thus no devices will be found.
             if (!fs.existsSync('/sys/bus/w1/devices')) {
                 expect(devices).to.have.lengthOf(0);
             }
@@ -75,12 +76,14 @@ describe('factory', function () {
         it('stream controller', function () {
             const testDataStream = [1.1, 2.2, 3.3];
 
-            let stream = factory.fromStream.apply(null, [true].concat(testDataStream));
+            let stream =
+                factory.fromStream.apply(null, [true].concat(testDataStream));
             expect(stream).to.be.an.instanceof(StreamController);
             expect(stream._repeatable).to.be.equal(true);
             expect(stream._values).to.deep.equal(testDataStream);
 
-            stream = factory.fromStream.apply(null, [false].concat(testDataStream));
+            stream =
+                factory.fromStream.apply(null, [false].concat(testDataStream));
             expect(stream).to.be.an.instanceof(StreamController);
             expect(stream._repeatable).to.be.equal(false);
             expect(stream._values).to.deep.equal(testDataStream);

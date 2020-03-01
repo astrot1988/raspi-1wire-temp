@@ -3,11 +3,12 @@
 [![npm version](https://badge.fury.io/js/raspi-1wire-temp.svg)](https://badge.fury.io/js/raspi-1wire-temp)
 [![npm](https://img.shields.io/npm/dw/raspi-1wire-temp.svg)](https://www.npmjs.com/package/raspi-1wire-temp)
 
-Provides a high-level interface to a "[1-wire](https://pinout.xyz/pinout/1_wire)" compatible device 
-or file on a Raspberry Pi.
+Provides a high-level interface to a "[1-wire](https://pinout.xyz/pinout/1_wire)"
+compatible device or file on a Raspberry Pi.
 
-This code was really only tested with a DS18B20 on a Raspberry Pi 3.  I would very much appreciate
-testers with different hardware to test and use this module.
+This code was really only tested with a DS18B20 on a Raspberry Pi 3.  I would
+very much appreciate testers with different hardware to test and use this 
+module.
 
 ## Installation
 
@@ -17,19 +18,19 @@ testers with different hardware to test and use this module.
 
 ### Finding Devices
 
-The idea with this approach is for R1WT to automatically determine what type of temperature 
-controller to create.  Currently this project only supports the output from a DS18B20 device.
-However if/when more temperature sensors are tested they could be integrated into R1WT relatively
-easy.
+The idea with this approach is for R1WT to automatically determine what type of
+temperature controller to create.  Currently this project only supports the 
+output from a DS18B20 device.  However if/when more temperature sensors are
+tested they could be integrated into R1WT relatively easy.
 
 ```
 const r1wt = require('raspi-1wire-temp');
 const devices = r1wt.findDevices();
 ```
 
-By default, R1WT looks for devices that can be globbed with `/sys/bus/w1/devices/28-*/w1_slave`
-However, `findDevices()` method has an optional _hint_ glob string that can help R1WT find the 
-device files.
+By default, R1WT looks for devices that can be globbed with 
+`/sys/bus/w1/devices/28-*/w1_slave`.  However, `findDevices()` method has an
+optional _hint_ glob string that can help R1WT find the device files.
 
 ```
 const r1wt = require('raspi-1wire-temp');
@@ -40,8 +41,9 @@ The `findDevices()` method will return a non-null array of filenames to devices.
 
 ### Creating A Device Controller
 
-Once you obtain the filename of a device, either through `findDevices()` or from a known location,
-the `fromDevice()` method is used to create the temperature controller.
+Once you obtain the filename of a device, either through `findDevices()` or from
+a known location, the `fromDevice()` method is used to create the temperature 
+controller.
 
 ```
 const r1wt = require('raspi-1wire-temp');
@@ -53,16 +55,17 @@ console.log(controller.current.celsius)
 console.log(controller.current.fahrenheit)
 ```
 
-For every call to `controller.current` the controller will re-read the device for the current 
-temperature.  If reading from the device is an expensive call it might be wise to cache the current
-temperature object for some time.
+For every call to `controller.current` the controller will re-read the device
+for the current temperature.  If reading from the device is an expensive call it 
+might be wise to cache the current temperature object for some time.
 
 ### Create an Emulated Controller
 
-For some contexts, like testing, you might need a stubbed or emulated device controller.  The 
-`fromStream()` method can be used to provide this functionality.  This may be particularly useful 
-when developing software on non-RPI hardware.  Effectively allowing a temperature sensor to be 
-emulated with a known stream of data.
+For some contexts, like testing, you might need a stubbed or emulated device 
+controller.  The `fromStream()` method can be used to provide this
+functionality.  This may be particularly useful when developing software on 
+non-RPI hardware.  Effectively allowing a temperature sensor to be emulated with
+a known stream of data.
 
 ```
 const r1wt = require('raspi-1wire-temp');
@@ -73,9 +76,9 @@ assert(controller.current.celsius == 2000);
 assert(controller.current.celsius == 3000);
 ```
 
-The first argument to `fromStream()` is a flag indicating if the stream should repeat.  When set to
-`false` the stream will raise an error when the data has been exhausted.  To repeat the stream, set
-the flag to `true`.
+The first argument to `fromStream()` is a flag indicating if the stream should
+repeat.  When set to `false` the stream will raise an error when the data has
+been exhausted.  To repeat the stream, set the flag to `true`.
 
 ```
 const r1wt = require('raspi-1wire-temp');
