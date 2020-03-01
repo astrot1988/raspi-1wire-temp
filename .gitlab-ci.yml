@@ -28,3 +28,4 @@ code_coverage:
   script:
     - npm install
     - npm run coverage
+    - curl -s https://codecov.io/bash | bash -s --
