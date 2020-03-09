@@ -1,14 +1,14 @@
 ## Version 2
 
-### 2.0.1
+### 2.0.1 - not yet released.
 - Added dates of version release in CHANGELOG.md.
 
-### 2.0.0
+### 2.0.0 - 2020 March 1
 - Version bump from 1.0.8.
 
 ## Version 1
 
-### 1.0.8
+### 1.0.8 - 2018 October 28
 - Converted TODOs into GitLab Issues.
 - Added CHANGELOG.md.
 - Added CONTRIBUTING.md.
