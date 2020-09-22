@@ -2,7 +2,7 @@ image: node:latest
 
 include:
   - template: Dependency-Scanning.gitlab-ci.yml
-  - template: License-Management.gitlab-ci.yml
+  - template: License-Scanning.gitlab-ci.yml
   - template: SAST.gitlab-ci.yml
 
 # This is a reusable script block rather than a normal "before_script" directive
