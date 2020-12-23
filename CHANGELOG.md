@@ -2,6 +2,7 @@
 
 ### 2.0.1 - not yet released.
 - Added dates of version release in CHANGELOG.md.
+- Added logo image files.
 
 ### 2.0.0 - 2020 March 1
 - Version bump from 1.0.8.
